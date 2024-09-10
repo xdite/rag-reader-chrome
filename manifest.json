@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "URL Sender",
+  "version": "1.0",
+  "description": "將當前URL發送到本地服務器",
+  "permissions": ["activeTab", "tabs"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
