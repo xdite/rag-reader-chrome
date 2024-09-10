@@ -11,6 +11,11 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "sendToRagReader") {
     let videoUrl = info.linkUrl || tab.url;
     let targetUrl = `http://localhost:8501/?youtube_url=${encodeURIComponent(videoUrl)}`;
-    chrome.tabs.create({ url: targetUrl });
+    chrome.windows.create({ 
+      url: targetUrl, 
+      type: 'popup',
+      width: 1000,
+      height: 800
+    });
   }
 });
