@@ -3,7 +3,14 @@
   "name": "URL Sender",
   "version": "1.0",
   "description": "將當前URL發送到本地服務器",
-  "permissions": ["activeTab", "tabs"],
+  "permissions": ["activeTab", "tabs", "contextMenus"],
+  "host_permissions": [
+    "*://www.youtube.com/*",
+    "*://youtu.be/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "action": {
     "default_popup": "popup.html"
   }
